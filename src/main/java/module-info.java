@@ -13,4 +13,8 @@ module br.com.ducosmo.creditbuddy {
     // Abre o pacote de serviço para acesso, se necessário
     opens br.com.ducosmo.creditbuddy.service to javafx.fxml;
     exports br.com.ducosmo.creditbuddy.service;
+
+    // LINHA ADICIONADA: Permite que o JavaFX "espia" dentro da classe Pessoa
+    // para preencher a tabela.
+    opens br.com.ducosmo.creditbuddy.model to javafx.base;
 }

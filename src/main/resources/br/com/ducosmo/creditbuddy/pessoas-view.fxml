@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.ducosmo.creditbuddy.PessoasController">
+    <center>
+        <TableView fx:id="tabelaPessoas" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="colunaNome" prefWidth="250.0" text="Nome" />
+                <TableColumn fx:id="colunaCelular" prefWidth="150.0" text="Celular" />
+            </columns>
+            <BorderPane.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </BorderPane.margin>
+        </TableView>
+    </center>
+    <right>
+        <VBox alignment="TOP_CENTER" prefWidth="200.0" spacing="10.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+            <Label text="Cadastro de Pessoas" />
+            <TextField fx:id="campoNome" promptText="Nome" />
+            <TextField fx:id="campoCelular" promptText="Celular" />
+            <HBox spacing="10.0">
+                <Button fx:id="botaoSalvar" mnemonicParsing="false" onAction="#onSalvar" text="Salvar" />
+                <Button fx:id="botaoNovo" mnemonicParsing="false" onAction="#onNovo" text="Novo" />
+            </HBox>
+            <Button fx:id="botaoExcluir" mnemonicParsing="false" onAction="#onExcluir" text="Excluir Selecionado" />
+        </VBox>
+    </right>
+</BorderPane>

@@ -14,7 +14,7 @@
                 <Menu mnemonicParsing="false" text="Cadastros">
                     <items>
                         <MenuItem mnemonicParsing="false" onAction="#abrirCadastroPessoas" text="Pessoas" />
-                        <MenuItem mnemonicParsing="false" text="Cartões (em breve)" />
+                        <MenuItem mnemonicParsing="false" onAction="#abrirCadastroCartoes" text="Cartões" />
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Ajuda">

@@ -61,12 +61,22 @@ public class DatabaseService {
                 "nome TEXT NOT NULL," +
                 "celular TEXT);";
 
+        String sqlCreateTableCartoes = "CREATE TABLE IF NOT EXISTS cartoes (" +
+                "id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "nome_cartao TEXT NOT NULL," +
+                "bandeira TEXT," +
+                "dia_vencimento INTEGER," +
+                "dia_fechamento INTEGER);";
+
         // Usamos try-with-resources para garantir que o Statement seja fechado
         try (Connection conn = getConnection();
              Statement stmt = conn.createStatement()) {
 
             stmt.execute(sqlCreateTablePessoas);
             System.out.println("Tabela 'pessoas' verificada/criada com sucesso.");
+
+            stmt.execute(sqlCreateTableCartoes);
+            System.out.println("Tabela 'cartoes' verificada/criada com sucesso.");
 
         } catch (SQLException e) {
             System.err.println("Erro ao criar tabela 'pessoas': " + e.getMessage());
